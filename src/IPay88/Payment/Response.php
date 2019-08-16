@@ -6,7 +6,7 @@ use IPay88\Security\Signature;
 
 class Response
 {
-	public static $requeryUrl = 'https://www.mobile88.com/epayment/enquiry.asp';
+	public static $requeryUrl = 'https://payment.ipay88.com.my/epayment/enquiry.asp';
 
 	private $return;
 	public function init($merchantCode, $requery = TRUE, $return_data = TRUE) {
@@ -54,7 +54,7 @@ class Response
 	* - Payment fail       - Payment failed.
 	* - M88Admin           - Payment status updated by Mobile88 Admin (Fail)
 	*/
-  
+
 	public function requery($payment_details) {
 		if (!function_exists('curl_init')) {
 			trigger_error('PHP cURL extension is required.');

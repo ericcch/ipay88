@@ -1,4 +1,4 @@
-<?php 
+<?php
 use IPay88\RequestForm;
 
 class IPay88
@@ -15,12 +15,12 @@ class IPay88
 		$this->responseUrl = $responseUrl;
 		$this->backendResponseUrl = $backendResponseUrl;
 	}
-	
+
 	/**
      * Generate signature to be used for transaction.
      *
      * You may verify your signature with online tool provided by iPay88
-     * http://www.mobile88.com/epayment/testing/TestSignature.asp
+     * http://payment.ipay88.com.my/epayment/testing/TestSignature.asp
      *
      * @access public
      * @param string $merchantKey ProvidedbyiPay88OPSGandsharebetweeniPay88and merchant only
@@ -45,7 +45,7 @@ class IPay88
     private function _hex2bin($source)
     {
     	$bin = null;
-    	for ($i=0; $i < strlen($source); $i=$i+2) { 
+    	for ($i=0; $i < strlen($source); $i=$i+2) {
     		$bin .= chr(hexdec(substr($source, $i, 2)));
     	}
     	return $bin;
@@ -90,7 +90,7 @@ class IPay88
 
     /**
     * @access public
-    * @param 
+    * @param
     */
     public function makeRequestForm($args)
     {
